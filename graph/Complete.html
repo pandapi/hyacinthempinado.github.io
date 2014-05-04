@@ -15,7 +15,6 @@
 }
 .nav li {
     float: left;
-    font-size: 15px;
     
 }
 
@@ -31,7 +30,7 @@
 }
 
 .nav a:hover{
-    background-color: #CD03E4;
+    background-color: red;
     text-decoration: none;
 }
 
@@ -95,26 +94,11 @@ body {
 				font-weight: 600;
 			}
 		
-.story p {
-				font-family: sans-serif;
-				font-size: 14px;
-				margin-left: 50px;
-		}
-		
-.disclaimer {
-		font-style: italic;
-		font-size: 12px;
-		color: #E6E6E6;
-}
-
-.end{
-		text-align:center;
-		font-size: 12px;
-		padding-top: 1px;
-}
 		</style>
-		
-<script type="text/javascript">
+	</head>
+	<body>
+	<div id="chart"></div>
+		<script type="text/javascript">
 		
 //Width and height
 			var w = 1300;
@@ -136,7 +120,7 @@ body {
 			makePlot = function() {
 				//Create SVG element
 				
-				tooltip = d3.select("#chart").append("div")
+				tooltip = d3.select("body").append("div")
 							.attr("class", "plan_tooltip")
 							.style("position", "absolute")
 							.style("z-index", "10")
@@ -144,7 +128,7 @@ body {
 							.text("");
 				
 				
-				var svg = d3.select("#chart")
+				var svg = d3.select("body")
 							.append("svg")
 							.attr("width", w)
 							.attr("height", h);
@@ -309,24 +293,13 @@ body {
       .style("text-anchor", "end")
       .text(function(d) { return d; });
       
-			svg.append("text")
-		.attr("text-anchor","middle")
-		.attr("class", "disclaimer")
-		.attr("x", 650)
-		.attr("y", 785)
-		.text("This graph shows the number of students enrolled in the Free or Reduced Lunch Program, and the federal reimbursement each school system received in 2010. Data from the New America Foundation.")
-		.attr("font-size", 15)
-		.attr("fill", "#C4C2C2");
-      
       
 
 };
 					
 		</script>
-	</head>
-	<body>
-	
-	<div class="nav">
+		
+		<div class="nav">
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
@@ -345,61 +318,49 @@ body {
 
 <div class="headline">
     <h1>School Lunch Prices Increase</h1>
-</div>
-		
-		
-<div id="chart"></div>
-
-
+    
 <div class="story">
-<p>Schools across Georgia are raising their lunch prices a few cents at a time.</p>
+<p>
+Schools across Georgia are raising their lunch prices a few cents at a time. 
 
-<p>The increases are due to a federal mandate that requires schools to raise lunch prices for students who do not qualify for a free or reduced lunch.</p>
+The increases are due to a federal mandate that requires schools to raise lunch prices for students who do not qualify for a free or reduced lunch. 
 
-<p>According to the mandate released by the U.S. Department of Agriculture (USDA), schools either need to raise the prices of their meals or seek non-federal funding to ensure that schools have enough money to produce meals for students who do not qualify for a free or reduced lunch.</p>
+According to the mandate released by the U.S. Department of Agriculture (USDA), schools either need to raise the prices of their meals or seek non-federal funding to ensure that schools have enough money to produce meals for students who do not qualify for a free or reduced lunch.
 
-<p>The goal is to increase prices until they are equal to the federal government reimbursement for every “free” lunch served by a school.</p>
+The goal is to increase prices until they are equal to the federal government reimbursement for every “free” lunch served by a school.
 
-<p>“We get more money for a child who’s eating free than we get for a parent who’s paying for that meal,” said Debbie Morris, nutrition director of the Jackson County School System. </p>
+“We get more money for a child who’s eating free than we get for a parent who’s paying for that meal,” said Debbie Morris, nutrition director of the Jackson County School System. 
 
-<p>This school year, the USDA gave schools a minimum of $ 2.93 for every student who qualified for a free lunch, $ 2.53 for a reduced lunch, and $ 0.28 for a paid lunch. These rates are for schools where less than 60 percent of students qualify for a free or reduced lunch. There are slightly higher rates for schools with 60 percent or more. The maximum reimbursement rate is $ 3.16 for a free lunch, 2.76 for a reduced lunch and $ 0.42 cents for a paid lunch. </p>
+This school year, the USDA gave schools a minimum of $ 2.93 for every student who qualified for a free lunch, $ 2.53 for a reduced lunch, and $ 0.28 for a paid lunch. These rates are for schools where less than 60 percent of students qualify for a free or reduced lunch. There are slightly higher rates for schools with 60 percent or more. The maximum reimbursement rate is $ 3.16 for a free lunch, 2.76 for a reduced lunch and $ 0.42 cents for a paid lunch. 
 
-<p>In Jackson County, students who do not qualify for a free or reduced lunch paid $ 1.85, if they were in elementary school and $ 2.25, if they were in middle or high school. </p>
+In Jackson County, students who do not qualify for a free or reduced lunch paid $ 1.85, if they were in elementary school and $ 2.25, if they were in middle or high school. 
 
-<p>“It is the goal of the USDA not to have to share the burden of parents who can afford to pay for their kids [and] their meals,” Morris said. “It is the goal for the price of the meals to be equal at some point in time.“ </p>
+“It is the goal of the USDA not to have to share the burden of parents who can afford to pay for their kids [and] their meals,” Morris said. “It is the goal for the price of the meals to be equal at some point in time. “
 
-<p>Morris says her county is not alone. She says most schools have opted to increase the price gradually because parents would be facing a 50 to 60-cent increase if officials jacked the prices up all at once. </p>
+Morris says her county is not alone. She says most schools have opted to increase the price gradually because parents would be facing a 50 to 60-cent increase if officials jacked the prices up all at once. 
 
-<p>“That would be just too much for our parents, so we’ve been doing it in small increments,” she said. </p>
+“That would be just too much for our parents, so we’ve been doing it in small increments,” she said. 
 
-<p>Conyers-Rockdale County has already announced their price increase for the next school year. Middle and high school students can expect a $0.15 increase from $2.10 to $2.25, as reported by Rockdalecitizen.com. Elementary school lunch prices remain the same, as they were increased this year. </p>
+Conyers-Rockdale County has already announced their price increase for the next school year. Middle and high school students can expect a $0.15 increase from $2.10 to $2.25, as reported by Rockdalecitizen.com. Elementary school lunch prices remain the same, as they were increased this year. 
 
-<p>Carroll County has also increased their lunch prices for all students by 10 cents. Next school year, elementary students will pay $ 1.95; middle school students will pay $2.10, and high school students will pay $2.35, according to the Times-Georgian. </p>
+Carroll County has also increased their lunch prices for all students by 10 cents. Next school year, elementary students will pay $ 1.95; middle school students will pay $2.10, and high school students will pay $2.35, according to the Times-Georgian. 
 
-<p>Playing catch-up with the federal reimbursement rates is not so easy. To complicate matters even more, the reimbursement rates increase annually, as well. </p>
+Playing catch-up with the federal reimbursement rates is not so easy. To complicate matters even more, the reimbursement rates increase annually, as well. 
 
-<p>The rates are based on the rising costs of living, according to state nutrition director Nancy Rice. </p>
+The rates are based on the rising costs of living, according to state nutrition director Nancy Rice. 
 
-<p>Each year, the cost of living goes up by a couple of cents, Rice said.</p>
+Each year, the cost of living goes up by a couple of cents, Rice said.
 
-<p>Some schools may also spend more money producing the meals than what they get from children or the government. Rice says this is another reason schools raise prices.  </p>
+Some schools may also spend more money producing the meals than what they get from children or the government. Rice says this is another reason schools raise prices.  
 
-<p>“It’s just supply and demand,” Rice says. </p>
+“It’s just supply and demand,” Rice says. 
 
-<p>However, Rice says this is not the only option. Instead of increasing prices, schools may opt to offer less fresh fruit or offer cheaper food options. For example, schools may offer chicken nuggets made from chopped meat rather than a whole muscle patty. Schools may also have to cut down on staff or cull some benefits.</p>
+However, Rice says this is not the only option. Instead of increasing prices, schools may opt to offer less fresh fruit or offer cheaper food options. For example, schools may offer chicken nuggets made from chopped meat rather than a whole muscle patty. Schools may also have to cut down on staff or cull some benefits.
 
-<p>“That’s not a popular thing to do, but if you are losing money, you have to look at it and decide [they can] cut.”</p>
+“That’s not a popular thing to do, but if you are losing money, you have to look at it and decide [they can] cut.”
+</p>
 
 
-</div>
-
-<br></br>
-<br></br>
-<br></br>
-
-<div class="end">
-<p>Copyright Hyacinth Empinado</p>
-<p>2014</p>
 </div>
 	</body>
 </html>
